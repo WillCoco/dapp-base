@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { Button } from 'element-react';
+import 'element-theme-default';
 import logo from './logo.svg';
 import './App.css';
+import './theme/index.css';
+import './config/rem';
+import configureStore from './store';
+import Part1 from './components/part1';
+import Part2 from './components/part2';
+import { initApp } from './actions';
+
+const store = configureStore();
+
+store.dispatch(initApp());
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <Button type="primary">qqq</Button>
+        <Part1></Part1>
+        <Part2></Part2>
+      </Provider>
     );
   }
 }
