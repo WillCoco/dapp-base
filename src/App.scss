@@ -1,3 +1,5 @@
+@import './theme/app/index.scss';
+
 .App {
   text-align: center;
 }
@@ -21,6 +23,13 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: $dark-background;
 }
 
 @keyframes App-logo-spin {
