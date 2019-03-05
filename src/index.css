@@ -13,6 +13,6 @@ code {
     monospace;
 }
 
-a {
+a, p {
   font-size: 0.6rem
 }

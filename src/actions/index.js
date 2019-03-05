@@ -1,6 +1,7 @@
 import EOS from "eosjs";
 import ScatterJS from "scatterjs-core";
 import ScatterEOS from "scatterjs-plugin-eosjs";
+import { getRemoteTime, startCount } from "./time";
 
 export const ACTION_TEST = Symbol('ACTION_TEST');
 export const UPDATE_IDENTITY = Symbol('UPDATE_IDENTITY');
@@ -22,11 +23,19 @@ let isConnected;
 
 // 自动登陆
 export function initApp() {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
     // 注册自动登录
     document.addEventListener('scatterLoaded', () => {
       connect()(dispatch);
     });
+
+    // 同步remote时间
+    getRemoteTime()(dispatch, getState);
+
+    // 获取游戏round信息
+
+    // 计算剩余时间
+    startCount()(dispatch, getState);
   }
 }
 
