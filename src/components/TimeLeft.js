@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 
 class TimeLeft extends Component {
   timeFormat = (timeLeft) => {
+    timeLeft = timeLeft < 0 ? 0 : timeLeft;
     const duration = timeLeft / 1000;
     const hours = parseInt(duration / 3600);
-    const mins = parseInt((duration % 3600) / 60);
-    const seconds = parseInt(duration % 3600 % 60);
+    const secondsLeft = duration % 3600;
+    const mins = parseInt(secondsLeft / 60);
+    const seconds = parseInt(secondsLeft % 60);
+
     return {
       hours: hours < 10 ? `0${hours}` : hours,
       mins: mins < 10 ? `0${mins}` : mins,

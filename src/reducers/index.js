@@ -3,7 +3,7 @@ import {UPDATE_REMOTE_TIME, UPDATE_TIME_LEFT} from '../actions/time';
 
 const initialState = {
   roundInfo: {
-    startTime: 1551763700000,
+    startTime: 1551775700000,
   },
   identity: null,
   timeOffset: 0, // 服务器时间校正
