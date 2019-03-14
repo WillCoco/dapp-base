@@ -1,9 +1,11 @@
 import EOS from "eosjs";
 import ScatterJS from "scatterjs-core";
 import ScatterEOS from "scatterjs-plugin-eosjs";
+import i18n from "../language";
 
 export const ACTION_TEST = Symbol('ACTION_TEST');
 export const UPDATE_IDENTITY = Symbol('UPDATE_IDENTITY');
+export const CHANGE_LANGUAGE = Symbol('CHANGE_LANGUAGE');
 
 
 const network = {
@@ -29,6 +31,14 @@ export function initApp() {
     });
   }
 }
+
+// 更新语言
+export function changeLanguage(language) {
+  return async (dispatch) => {
+    i18n.changeLanguage(language);
+    return dispatch({ type: CHANGE_LANGUAGE, payload: { language } })
+  }
+};
 
 // 手动登陆
 export function login() {
