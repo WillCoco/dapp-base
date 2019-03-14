@@ -2,9 +2,11 @@ import EOS from "eosjs";
 import ScatterJS from "scatterjs-core";
 import ScatterEOS from "scatterjs-plugin-eosjs";
 import { getRemoteTime, startCount } from "./time";
+import i18n from "../language";
 
 export const ACTION_TEST = Symbol('ACTION_TEST');
 export const UPDATE_IDENTITY = Symbol('UPDATE_IDENTITY');
+export const CHANGE_LANGUAGE = Symbol('CHANGE_LANGUAGE');
 
 
 const network = {
@@ -36,6 +38,14 @@ export function initApp() {
 
     // 计算剩余时间
     startCount()(dispatch, getState);
+  }
+}
+
+// 更新语言
+export function changeLanguage(language) {
+  return async (dispatch) => {
+    i18n.changeLanguage(language);
+    return dispatch({ type: CHANGE_LANGUAGE, payload: { language } })
   }
 }
 
