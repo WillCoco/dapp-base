@@ -1,0 +1,34 @@
+@import '../../../index';
+
+.time-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.time-cell-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-time {
+  @extend .summary-title-light;
+  font-weight: $font-weight-x;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.time-colon {
+  display: block;
+  @include font(0.64rem, $font-color-light-s);
+  margin-left: 0.3 * $base-gap;
+  margin-right: 0.3 * $base-gap;
+  position: relative;
+  top: 0.18rem;
+}
+
+.time-text-unit {
+  @extend .text-tiny-light;
+  color: $font-color-light-s
+}

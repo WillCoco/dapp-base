@@ -30,8 +30,8 @@ function updateTimeLeft(dispatch, getState) {
   return function iterate() {
     if (Date.now() - lastTime >= 1000) {
       lastTime = Date.now();
-      const { roundInfo = {}, timeOffset, timeTotal } = getState();
-      const timeLeft = timeTotal - (Date.now() - roundInfo.startTime + timeOffset);
+      const { icoInfo = {}, timeOffset, timeTotal } = getState();
+      const timeLeft = timeTotal - (Date.now() - icoInfo.startTime + timeOffset);
       dispatch({ type: UPDATE_TIME_LEFT, payload: { timeLeft } });
     }
     requestAnimationFrame(() => iterate(dispatch, getState));

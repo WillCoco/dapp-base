@@ -1,0 +1,49 @@
+@import '../../index';
+
+.summary-sell-title {
+  @include font($font-size-title, $font-color-light, $font-weight-x)
+}
+
+.summary-text-column-top {
+  @extend .text-normal-light;
+  margin: 0.64rem 0 0 0;
+}
+
+.summary-text-column-bottom {
+  @extend .text-medium-light-s;
+  margin: 0.2133rem 0 0 0;
+}
+
+.sell-title {
+  @extend .summary-title-light;
+  margin-bottom: 1.0667rem;
+}
+
+.text-purpose-wrapper {
+  @extend .row;
+  padding: 0.08rem 0.2rem;
+  margin-top: 0.1rem;
+  border-radius: 0.08rem;
+  background: $light-background-s;
+  @extend .text-medium-light;
+}
+
+.text-purpose-left {
+  display: inline-block;
+  width: 0.8rem;
+}
+
+.sell-title-purpose {
+  @extend .summary-sell-title;
+  margin-top: 1.28rem;
+}
+
+.purpose-barrier {
+  @extend .line-light;
+  width: 0.4rem;
+  margin: 0 0.2rem;
+}
+
+.summary-token-purpose {
+  margin-top: 1.1rem;
+}

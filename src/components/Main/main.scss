@@ -1,0 +1,65 @@
+@import '../../theme/app/index.scss';
+@import '../../index.scss';
+
+.main-wrapper {
+  margin-top: $header-height;
+  padding: 0.8533rem $base-gap;
+}
+
+.text-follow {
+  @include font(null, $font-color-light);
+  display: inline-block;
+  margin-top: 0.3rem;
+  position: relative;
+  &::after {
+    content: '';
+    height: 1px;
+    width: 70%;
+    background: $theme-color;
+    position: absolute;
+    left: 0;
+    bottom: -10px
+  }
+}
+
+.main-progress {
+  width: 6.9rem;
+  margin: 0 auto;
+}
+
+.sell-card {
+  border: 1px solid $card-background;
+  background: $card-background;
+  margin: 1.2260rem 0.4267rem 0 0.4267rem;
+  padding-bottom: 0.92rem;
+  & > .el-card__body {
+    text-align: center;
+    background: $card-background;
+  }
+}
+
+.sell-card-title {
+  @extend .text-normal-light;
+  letter-spacing: 0.0533rem;
+  margin-top: 0.48rem;
+}
+
+.sell-card-time-left {
+  margin-top: 0.96rem;
+}
+
+.sell-card-text-process {
+  @extend .text-small-light;
+  margin-top: 0.94rem;
+}
+
+.buy-token-btn {
+  margin-top: 1.1733rem;
+  width: 6.61rem;
+}
+
+.sell-card-text-exchange {
+  @extend .text-small-light;
+  margin-top: 0.2133rem;
+}
+

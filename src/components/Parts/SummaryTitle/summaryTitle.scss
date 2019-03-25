@@ -1,0 +1,38 @@
+@import '../../../index';
+
+.summary-title-dark-1 {
+  @extend .row;
+  color: $font-color-dark;
+  margin-top: 0.44rem;
+}
+
+.summary-title-light-1 {
+  @extend .row;
+  color: $font-color-light;
+  margin-top: 0.44rem;
+}
+
+.summary-title-barrier {
+  display: inline-block;
+  width: 1.0667rem;
+  vertical-align: middle;
+  margin: 0 0.4267rem;
+}
+
+.summary-title-barrier-dark {
+  @extend .summary-title-barrier;
+  @extend .line-dark
+}
+
+.summary-title-barrier-light {
+  @extend .summary-title-barrier;
+  @extend .line-light;
+}
+
+.summary-title-text-light {
+  @include font($font-size-title-s, $font-color-light)
+}
+
+.summary-title-text-dark {
+  @include font($font-size-title-s, $font-color-dark)
+}

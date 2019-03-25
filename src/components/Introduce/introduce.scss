@@ -1,0 +1,29 @@
+@import '../../index';
+
+.introduce-wrapper {
+  padding-bottom: 0.4267rem;
+}
+
+.introduce-title {
+  @extend .summary-title-dark;
+  margin-bottom: 1.0667rem;
+  //margin-top: 0.933rem;
+}
+
+.introduce-text {
+  @extend .text-medium-dark-m;
+  margin-top: 1.0667rem;
+}
+
+.introduce-line {
+  @extend .line-dark-m;
+  margin: 0.72rem 0;
+}
+
+.introduce-row {
+  margin-top: 0.4267rem;
+}
+
+.introduce-row p{
+  margin: 0;
+}

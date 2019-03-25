@@ -1,0 +1,56 @@
+@import '../../theme/app/index.scss';
+@import '../../index';
+
+.FAQ-wrapper .el-collapse {
+  background: $dark-background;
+  border: 0;
+}
+
+// question & answer 的容器
+.FAQ-wrapper .el-collapse .el-collapse-item {
+  position: relative;
+  border: 1px solid grey;
+  border-radius: $radius;
+  margin-top: 0.4rem;
+}
+
+// question
+.FAQ-wrapper .el-collapse-item__header {
+  background: $dark-background;
+  border-radius: $radius;
+  border: 0;
+}
+
+.FAQ-title-wrapper {
+  padding: 0 0.3rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.FAQ-title-text {
+  @extend .title-small-light;
+  margin: 0;
+}
+
+// answer
+.FAQ-wrapper .el-collapse-item .collapse-transition .el-collapse-item__wrap {
+  background: $dark-background;
+  border-radius: $radius;
+  border: 0;
+  & .el-collapse-item__content {
+    padding: 0 10px 20px 10px;
+  }
+}
+
+.text-answer {
+  @extend .text-normal-light;
+  margin: 5px 0;
+  color: grey
+}
+.FAQ-collapse-wrapper {
+
+}

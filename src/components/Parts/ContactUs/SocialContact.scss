@@ -1,0 +1,10 @@
+@import '../../../index';
+
+.social-contact-icon {
+  margin: 0 0.14rem;
+}
+
+.social-wrapper {
+  @extend .row;
+  margin-top: 0.64rem;
+}

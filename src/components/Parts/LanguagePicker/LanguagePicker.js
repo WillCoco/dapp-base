@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Dropdown } from 'element-react';
-import { changeLanguage } from '../actions';
+import { changeLanguage } from '../../../actions/index';
+import './languagePicker.scss';
 
 class LanguagePicker extends Component {
   handleCommand = (lang) => {
@@ -13,19 +14,20 @@ class LanguagePicker extends Component {
     const { i18n } = this.props;
     return (
       <Dropdown
+        trigger="click"
         onCommand={this.handleCommand}
         menu={(
-          <Dropdown.Menu>
+          <Dropdown.Menu className="language-picker-menu">
             {
               i18n.languages.map(lang =>
-                (<Dropdown.Item key={`language-${lang}`} command={lang}>{i18n.getFixedT(lang)('language')}</Dropdown.Item>)
+                (<Dropdown.Item className="language-picker-item" key={`language-${lang}`} command={lang}>{i18n.getFixedT(lang)('language')}</Dropdown.Item>)
               )
             }
           </Dropdown.Menu>
         )}
       >
-      <span className="el-dropdown-link">
-        {i18n.t('language')}<i className="el-icon-caret-bottom el-icon--right"></i>
+      <span className="el-dropdown-link title-small-light">
+        {i18n.t('language')}<i className="el-icon-arrow-down"></i>
       </span>
       </Dropdown>
     )

@@ -1,3 +1,87 @@
-// 颜色
+/**
+ * 变量
+ */
 
-$dark-background: #00000055
+// 颜色
+$theme-color: #F06051;
+
+$card-background: #211D2D;
+
+$dark-background: #120F1B;
+
+$dark-background-s: rgba(0,0,0,0.1);
+
+$light-background: #ffffff;
+
+$light-background-s: rgba(255,255,255,0.1);
+
+$font-color-dark: #18181C;
+
+$font-color-dark-m: rgba(24,24,28,0.85);;
+
+$font-color-grey: #7A7A91;
+
+$font-color-light: #fff;
+
+$font-color-light-m: rgba(255, 255, 255, 0.65);
+
+$font-color-light-s: rgba(255, 255, 255, 0.45);
+
+$colorful-1: #FD6642;
+
+$colorful-2: #FFC856;
+
+$colorful-3: #8FD661;
+
+$colorful-4: #46CBFF;
+
+$colorful-5: #4A77F6;
+
+
+/* --- 尺寸 iphone6 ---*/
+// 字号
+$font-size-title-l: 0.8533rem;   // 32px
+
+$font-size-title: 0.64rem; // 24px
+
+$font-size-title-m: 0.5333rem; // 20px
+
+$font-size-title-s: 0.48rem;   // 18px
+
+$font-size-normal: 0.4267rem;  // 16px
+
+$font-size-medium: 0.3733rem;  // 14px
+
+$font-size-small: 0.32rem;     // 12px
+
+$font-size-tiny: 0.2667rem;    // 10px
+
+//line-height
+$line-height-x: 1.12rem;
+
+$line-height: 0.56rem;
+
+// 字粗
+$font-weight-xx: 700;
+
+$font-weight-x: 500;
+
+$font-weight-s: 200;
+
+// 常规尺寸
+$base-gap: 0.65rem; // 24px
+
+$header-height: 1.28rem;
+
+// 圆角
+$radius: 0.1067rem;
+
+
+/**
+ * mix
+ */
+@mixin font($size: $font-size-normal, $color: $font-color-dark, $weight: null) {
+  font-size: $size;
+  color: $color;
+  @if null != $weight { font-weight: $weight}
+}

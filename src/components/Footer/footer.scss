@@ -1,0 +1,41 @@
+@import '../../index';
+
+.footer-content-wrapper {
+  width: 100%
+}
+
+.footer-text-share {
+  @extend .text-small-light-s;
+  max-width: 60%
+}
+
+.footer-text-contract {
+  @extend .text-medium-light;
+  margin: 0.8533rem 0 0.32rem 0;
+}
+
+.footer-text-phone {
+  @extend .text-medium-light;
+  margin: 0;
+}
+
+.footer-text-mail {
+  @extend .text-medium-light;
+  display: block;
+  margin-top: 0.1rem;
+  margin-bottom: 1.0667rem;
+}
+
+.footer-statement {
+  @extend .text-tiny-light-s;
+  margin: $base-gap/2 0 0 0;
+}
+
+.right-gap {
+  margin-right: 0.53rem
+}
+
+.footer-copyright {
+  @extend .text-medium-light-s;
+  margin-top: 0.32rem;
+}

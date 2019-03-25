@@ -1,0 +1,84 @@
+@import "../../index";
+
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  height: $header-height;
+  background: $dark-background;
+  padding-left: $base-gap;
+  padding-right: $base-gap;
+  z-index: 100;
+}
+
+.header-logo-box {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-logo {
+  @include font(null, $font-color-light);
+  margin-right: 0.2667rem;
+}
+
+.header-menu-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.header-menu-content {
+  padding: $header-height $base-gap $base-gap*3 $base-gap;
+  background: $dark-background;
+}
+
+.header-menu-btn-box {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.header-menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 0.4rem;
+  background: $light-background-s;
+  &:hover { opacity: 0.6; cursor: pointer };
+  &:active { opacity: 1; };
+}
+
+.header-menu-icon {
+  color: #fff;
+  font-size: 0.3rem;
+}
+
+.login-wrapper {
+  background: $light-background-s;
+  border-radius: $radius;
+  &:hover { opacity: 0.6; cursor: pointer };
+  &:active { opacity: 1; };
+}
+
+.login-account-name {
+  @extend .text-small-light;
+  margin: 0.2133rem;
+}
+
+.login-btn {
+  @extend .text-small-light;
+  margin: 0 0.2133rem;
+}
+
+.header-link {
+  @extend .title-small-light;
+  display: block;
+  margin: 0.56rem 0;
+}

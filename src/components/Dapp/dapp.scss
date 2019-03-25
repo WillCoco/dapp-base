@@ -1,0 +1,11 @@
+@import '../../index';
+
+.dapp-title {
+  @extend .summary-title-dark;
+  margin-bottom: 1.0667rem;
+}
+
+.dapp-text-coming {
+  @extend .title-medium-dark;
+  margin: 1.7333rem 0 1.0667rem 0;
+}

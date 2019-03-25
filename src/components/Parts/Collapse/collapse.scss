@@ -1,0 +1,38 @@
+@import '../../../index';
+
+.parts-collapse-wrapper {
+  border: 1px solid grey;
+  border-radius: $radius;
+  position: relative;
+}
+
+.parts-collapse-title-wrapper {
+
+}
+
+.parts-collapse-title {
+  @extend .title-small-light;
+  display: inline-block;
+  margin: 0.2rem 0;
+}
+
+.parts-collapse-text {
+  @extend .text-normal-light;
+  will-change: height;
+  position: absolute;
+  top: -1000px;
+  margin: 0 0.4rem;
+  line-height: 1.6;
+  color: grey;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.parts-collapse-icon {
+  display: inline-block;
+  width: 0.5rem
+}
+
+.parts-collapse-text-active {
+  @extend .parts-collapse-text;
+}
